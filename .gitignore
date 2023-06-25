@@ -1,2 +1,8 @@
-/.venv/
-/.idea/
+#Env
+.venv/
+
+# Package
+/dist/
+
+#PyCharm
+.idea/
