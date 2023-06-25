@@ -2,7 +2,7 @@
 .venv/
 
 # Package
-/dist/
+dist/
 
 #PyCharm
 .idea/
