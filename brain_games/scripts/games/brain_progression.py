@@ -18,7 +18,9 @@ def prepare_question(questions: []):
     start_value = random.randint(1, 20)
     inc_value = random.randint(1, 10)
     length = 10
-    progression = list(range(start_value, inc_value * length + start_value + 1, inc_value))
+    progression = list(range(start_value,
+                             inc_value * length + start_value + 1,
+                             inc_value))
 
     index = random.randint(1, 10)
     number = progression[index]

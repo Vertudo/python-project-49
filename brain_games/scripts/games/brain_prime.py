@@ -10,8 +10,8 @@ def main():
 
         i += 1
 
-    welcome_text = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-    brain_games.scripts.games.core.engine.run(welcome_text, questions)
+    welcome = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+    brain_games.scripts.games.core.engine.run(welcome, questions)
 
 
 def prepare_question(questions: []):

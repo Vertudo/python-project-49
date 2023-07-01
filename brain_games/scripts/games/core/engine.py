@@ -11,7 +11,9 @@ def run(welcome_text: str, questions: []):
         print(f'Question: {question}')
         answer = prompt.string('Your answer: ')
         if answer != correct_answer:
-            print(f'\'{answer}\' is wrong answer ;(. Correct answer was \'{correct_answer}\'.')
+            text = f'\'{answer}\' is wrong answer ;(. ' \
+                   f'Correct answer was \'{correct_answer}\'.'
+            print(text)
             print(f'Let\'s try again, {name}!')
             break
         else:
