@@ -3,7 +3,7 @@ import prompt
 
 
 def run(welcome_text: str, questions: []):
-    name = brain_games.scripts.brain_games.main()
+    name = brain_games.scripts.brain_games.main(True)
     print(welcome_text)
     i = 0
     for elem in questions:
