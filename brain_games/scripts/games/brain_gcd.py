@@ -1,5 +1,6 @@
 import brain_games.scripts.games.core.engine
 import random
+import math
 
 
 def main():
@@ -10,16 +11,18 @@ def main():
 
         i += 1
 
-    welcome_text = 'Answer "yes" if the number is even, otherwise answer "no".'
+    welcome_text = 'Find the greatest common divisor of given numbers.'
     brain_games.scripts.games.core.engine.run(welcome_text, questions)
 
 
 def prepare_question(questions: []):
-    number = random.randint(1, 100)
-    even = number % 2
-    correct_answer = 'yes' if even == 0 else 'no'
+    first_value = random.randint(1, 100)
+    second_value = random.randint(1, 100)
+    result = math.gcd(first_value, second_value)
 
-    questions.append((number, correct_answer))
+    expression = f'{first_value} {second_value}'
+
+    questions.append((expression, str(result)))
 
 
 if __name__ == '__main__':
