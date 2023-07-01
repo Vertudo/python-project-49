@@ -1,19 +1,14 @@
 import brain_games.scripts.brain_games
-import random
 import prompt
 
 
-def main():
+def run(welcome_text: str, questions: []):
     name = brain_games.scripts.brain_games.main()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    print(welcome_text)
     i = 0
-    total_correct_answers = 3
-    while i < total_correct_answers:
-        number = random.randint(1, 100)
-        even = number % 2
-        correct_answer = 'yes' if even == 0 else 'no'
-
-        print(f'Question: {number}')
+    for elem in questions:
+        question, correct_answer = elem
+        print(f'Question: {question}')
         answer = prompt.string('Your answer: ')
         if answer != correct_answer:
             print(f'\'{answer}\' is wrong answer ;(. Correct answer was \'{correct_answer}\'.')
@@ -23,9 +18,6 @@ def main():
 
         i += 1
 
-    if i == 3:
+    total_correct_answers = 3
+    if i == total_correct_answers:
         print(f'Congratulations, {name}!')
-
-
-if __name__ == '__main__':
-    main()
