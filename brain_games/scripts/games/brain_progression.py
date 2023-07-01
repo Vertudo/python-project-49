@@ -26,7 +26,9 @@ def prepare_question(questions: []):
 
     expression = ''
     for elem in progression:
-        expression += ' ' + str(elem)
+        expression += str(elem) + ' '
+
+    expression.strip()
 
     questions.append((expression, str(number)))
 
